@@ -55,12 +55,13 @@ if (!req.body) return res.sendStatus(400);
 
 email = req.body.email,
 password = req.body.password;
- var isVerified=false;
+ var isVerified=false,username=req.body.username;
 
 var userData = {
     email,
     password, 
-    isVerified
+    isVerified,
+    username
   }
 
 
@@ -74,7 +75,7 @@ var userData = {
     console.log(req.session.user);
   });
   
-var transporter = nodemailer.createTransport('smtps://email%40gmail.com:password@smtp.gmail.com');
+var transporter = nodemailer.createTransport('smtps://divykhare97%40gmail.com:1111188888@smtp.gmail.com');
 var mailOptions = {
     to:email, // list of receivers
     subject: 'Signup Confirmation', // Subject line

@@ -3,29 +3,70 @@
     <head>
         <title>Signup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {{!-- <link rel="stylesheet" href="/assets/styles.css" type="text/css"> --}}
+        <link rel="stylesheet" href="/assets/styles.css" type="text/css"> 
+        <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet"> 
         <style>
+            body{
+                background-image:url("sback.jpg");
+                background-size: cover;
+                
+            }
+            h1{
+               
+            text-align: center;
+            font-size: 4vw;
+            font-family: 'Marcellus SC', serif;
+            color:#188391;
+            }
+            h2{
+                font-size: 3vw;
+                margin-bottom: 2vw;
+                font-family: 'Cinzel Decorative', cursive;
+                letter-spacing: 0.25vw;
+                color: #ffffff;
+            }
+            button{
+                margin-top: 0.75vw;
+                background-color:#ffffff;
+               border: 0.2vw solid#035920;
+                width:8vw;
+                height:2.5vw;
+                border-radius:0.4vw;
+                font-family: 'Alegreya SC', serif;
+                font-size: 1.2vw;
+            }
+           
+            button span{
+                float: left;
+            }
             .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 2vw 2vw 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
-    margin-top: 15%;
-    margin-left: 30%;
+    width: 40vw;
+    margin-top: 2.8vw;
+    margin-left: 28vw;
     padding: .5% 2% 2% 2%;
     text-align: center;
-    
+   background-color: rgba(204, 223, 255,0.2);
+   z-index: 1.5;
+   
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2vw 4vwpx 0 rgba(0,0,0,0.2);
 }
 
-.container {
-    padding: 2px 16px;
-}
+
 .inp
 {
-    margin-bottom:10px;
+    margin-bottom:2vw;
+     width:30vw;
+     height:2vw;
+     border:0.6vw solid white;
+     border-radius: 0.5vw;
 }
         </style>
        <script>
@@ -43,16 +84,17 @@
 }
        </script>
     </head>
-    <body >
-        
+    <body>
+        <h1>Registration Form</h1>
         <div class="card">
-        <h2 >Create an Account</h2>
+        <h2 >Sign Up</h2>
            <form action="/land" method="POST" >
-               <input class="inp" name="email" type="email" required placeholder="something@gmail.com" pattern="[a-z0-9._%+-]+@g(oogle)?mail\.com" ><br>
-               <input class="inp" name="password" type="password" id="password" required placeholder="Password" minlength="8" onkeyup="check();" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
-               <input class="inp" name="conPassword" type="password" id="confirm_password" required placeholder="Confirm Password" onkeyup="check();"><br>
+            <input class="inp" name="username" required type="text" placeholder="Username" ><br>  
+               <input class="inp" name="email" type="email" required placeholder="Email" pattern="[a-z0-9._%+-]+@g(oogle)?mail\.com" ><br>
+               <input class="inp" name="password" type="password" id="password" placeholder="Password" required  minlength="8" onkeyup="check();" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+               <input class="inp" name="conPassword" type="password" id="confirm_password"  placeholder="Confirm Password" required  onkeyup="check();"><br>
                <span id="message"></span>
-               <button class="container" id="submit">Sign Up</button>
+               <button class="container" id="submit"> <span style="background-color: "><i style="color:#06e0d1"class="fas fa-user-plus"></i></span>Sign Up</button>
            </form>
            
           </div> 

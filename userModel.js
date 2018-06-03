@@ -14,6 +14,10 @@ var UserSchema=new mongoose.Schema({
     isVerified:{
         type:Boolean,
         default:false
+    },
+    username:{
+        type:String,
+        required:true
     }
 });
 UserSchema.pre('save', function (next) {
